@@ -6,8 +6,15 @@ require 'pry'
 class PatronTest < MiniTest::Test
 
   def test_it_exists
-    patron = Patron.new
+    patron = Patron.new(name)
     assert_instance_of Patron, patron
+  end
+
+  def test_it_requires_name_argument_to_instantiate
+    patron = Patron.new("Bob")
+    actual = "Bob"
+    expected = patron.name
+    assert_equal actual, expected
   end
 
 end
