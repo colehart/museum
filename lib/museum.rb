@@ -1,7 +1,7 @@
 require 'pry'
 
 class Museum
-  attr_reader :name
+  attr_reader :name,
               :exhibits
 
   def initialize(name)
@@ -9,7 +9,11 @@ class Museum
     @exhibits = {}
   end
 
-  # def add_exhibit(new_exhibit, cost)
-  #   @exhibit << new_exhibit
-  # end
+  def add_exhibit(new_exhibit, cost)
+    if @exhibits == nil
+      @exhibit Hash[new_exhibit, cost]
+    else
+      @exhibits.merge Hash[new_exhibit, cost]
+    end
+  end
 end

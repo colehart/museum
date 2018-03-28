@@ -17,19 +17,17 @@ class MuseumTest < MiniTest::Test
     assert_equal actual, expected
   end
 
-  def test_it_instantiates_with_empty_interest_array
-    skip
-    museum = Museum.new("Bob")
-    actual = []
-    expected = museum.interests
+  def test_it_instantiates_with_empty_exhibit_hash
+    museum = Museum.new("Denver Museum of Nature and Science")
+    actual = {}
+    expected = museum.exhibits
     assert_equal actual, expected
   end
 
-  def test_it_can_add_interests
-    skip
-    museum = Museum.new("Bob")
-    actual = []
-    expected = museum.add_interest("Dead Sea Scrolls")
+  def test_it_can_add_exhibits
+    museum = Museum.new("Denver Museum of Nature and Science")
+    actual = {}
+    expected = museum.add_exhibit("Dead Sea Scrolls", 10)
     refute_equal actual, expected
   end
 
