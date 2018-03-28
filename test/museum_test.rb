@@ -11,9 +11,8 @@ class MuseumTest < MiniTest::Test
   end
 
   def test_it_requires_name_argument_to_instantiate
-    skip
-    museum = Museum.new("Bob")
-    actual = "Bob"
+    museum = Museum.new("Denver Museum of Nature and Science")
+    actual = "Denver Museum of Nature and Science"
     expected = museum.name
     assert_equal actual, expected
   end
