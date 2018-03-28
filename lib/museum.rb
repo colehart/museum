@@ -10,10 +10,6 @@ class Museum
   end
 
   def add_exhibit(new_exhibit, cost)
-    if @exhibits == nil
-      @exhibit Hash[new_exhibit, cost]
-    else
-      @exhibits.merge Hash[new_exhibit, cost]
-    end
+    @exhibits.update Hash[new_exhibit, cost]
   end
 end

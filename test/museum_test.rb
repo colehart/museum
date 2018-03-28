@@ -24,11 +24,13 @@ class MuseumTest < MiniTest::Test
     assert_equal actual, expected
   end
 
-  def test_it_can_add_exhibits
+  def test_it_can_add_exhibits_with_name_as_key_and_cost_as_value
     museum = Museum.new("Denver Museum of Nature and Science")
-    actual = {}
-    expected = museum.add_exhibit("Dead Sea Scrolls", 10)
-    refute_equal actual, expected
+    museum.add_exhibit("Dead Sea Scrolls", 10)
+    museum.add_exhibit("Gems and Minerals", 0)
+    actual = {"Dead Sea Scrolls" => 10, "Gems and Minerals" => 0}
+    expected = museum.exhibits
+    assert_equal actual, expected
   end
 
 end
