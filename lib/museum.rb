@@ -2,11 +2,11 @@ require 'pry'
 
 class Museum
   attr_reader :name
-              #:exhibits
+              :exhibits
 
   def initialize(name)
     @name = name
-    #@exhibits = []
+    @exhibits = {}
   end
 
   # def add_exhibit(new_exhibit, cost)
