@@ -24,4 +24,11 @@ class PatronTest < MiniTest::Test
     assert_equal actual, expected
   end
 
+  def test_it_can_add_interests
+    patron = Patron.new("Bob")
+    actual = []
+    expected = patron.add_interests("Dead Sea Scrolls")
+    refute_equal actual, expected
+  end
+
 end
