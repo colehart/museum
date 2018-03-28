@@ -1,8 +1,8 @@
 require 'pry'
 
 class Patron
-  # attr_reader :name,
-  #             :interests
+  attr_reader :name,
+              :interests
 
   def initialize(name)
     @name = name
