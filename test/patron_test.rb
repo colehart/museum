@@ -17,4 +17,11 @@ class PatronTest < MiniTest::Test
     assert_equal actual, expected
   end
 
+  def test_it_instantiates_with_empty_interest_array
+    patron = Patron.new("Bob")
+    actual = []
+    expected = patron.interests
+    assert_equal actual, expected
+  end
+
 end
